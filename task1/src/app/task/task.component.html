@@ -1,0 +1,20 @@
+<table padding="2" border="2">
+	<tr>
+	 <th> Book ID </th>
+	 <th> Book Name </th>
+	 <th> Author </th>
+	 <th> Year of publish </th>
+	 </tr>
+  <tr>
+ <td><input [value]='search' (input)='search=$event.target.value' /></td>
+ <td><input [value]='search' (input)='search=$event.target.value' /></td>
+ <td><input [value]='search' (input)='search=$event.target.value' /></td>
+ <td><input [value]='search' (input)='search=$event.target.value' /></td>
+ </tr> 
+	<tr *ngFor="let b of list | searchPipe:search">
+		<td>{{b.BookId}}</td>
+		<td>{{b.title}}</td>
+		<td>{{b.Author}}</td>
+		<td>{{b.year}}</td>
+	</tr>
+</table>
